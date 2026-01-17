@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="card summary-card">
+    <text class="title">本局积分</text>
+    <text class="score">{{score}}</text>
+    <text class="text-muted">碰牌次数：{{meldCount}}</text>
+  </view>
+
+  <view class="card detail-card">
+    <text class="section-title">手牌预览</text>
+    <view class="hand">
+      <text wx:for="{{hand}}" wx:key="id" class="tile">{{item.label}}</text>
+    </view>
+  </view>
+
+  <view class="card detail-card">
+    <text class="section-title">碰牌详情</text>
+    <view class="melds">
+      <view class="meld" wx:for="{{melds}}" wx:key="index">
+        <text wx:for="{{item}}" wx:key="id" class="tile tile-meld">{{item.label}}</text>
+      </view>
+      <text wx:if="{{melds.length === 0}}" class="text-muted">暂无碰牌</text>
+    </view>
+  </view>
+
+  <button class="button-primary" bindtap="backToHome">返回首页</button>
+</view>

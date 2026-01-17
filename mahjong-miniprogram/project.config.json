@@ -1,0 +1,12 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "guangdong-hongzhong-mahjong",
+  "description": "广东红中赖子麻将小程序演示",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "minified": false
+  }
+}
