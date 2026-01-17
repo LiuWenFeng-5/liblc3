@@ -1,0 +1,23 @@
+<view class="page">
+  <view class="hero">
+    <text class="title">广东红中赖子麻将</text>
+    <text class="subtitle">四人对局 · 红中当赖子 · 经典碰碰胡节奏</text>
+  </view>
+
+  <view class="card mode-card">
+    <view class="mode">
+      <text class="mode-title">标准玩法</text>
+      <text class="mode-desc text-muted">含碰牌、赖子、基础积分结算</text>
+    </view>
+    <button class="button-primary" bindtap="startGame">开始对局</button>
+  </view>
+
+  <view class="card info-card">
+    <text class="info-title">特色</text>
+    <view class="info-list">
+      <text>• 红中赖子可替代任意牌</text>
+      <text>• 碰牌快速成型，适合快节奏对战</text>
+      <text>• 内置积分计算展示</text>
+    </view>
+  </view>
+</view>

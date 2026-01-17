@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/game",
+    "pages/score/score"
+  ],
+  "window": {
+    "navigationBarTitleText": "广东红中赖子麻将",
+    "navigationBarBackgroundColor": "#0F6D3F",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0B3B22"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

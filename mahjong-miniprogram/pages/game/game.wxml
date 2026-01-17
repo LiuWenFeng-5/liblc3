@@ -1,0 +1,45 @@
+<view class="page">
+  <view class="table-header">
+    <view>
+      <text class="table-title">当前回合</text>
+      <text class="table-subtitle text-muted">墙内剩余：{{wallCount}} 张</text>
+    </view>
+    <view class="score-card">
+      <text class="score-label">积分</text>
+      <text class="score-value">{{score}}</text>
+    </view>
+  </view>
+
+  <view class="card meld-card">
+    <text class="section-title">已碰牌</text>
+    <view class="melds">
+      <view class="meld" wx:for="{{melds}}" wx:key="index">
+        <text wx:for="{{item}}" wx:key="id" class="tile tile-meld">{{item.label}}</text>
+      </view>
+      <text wx:if="{{melds.length === 0}}" class="text-muted">暂无碰牌</text>
+    </view>
+  </view>
+
+  <view class="card discard-card">
+    <text class="section-title">上一张牌</text>
+    <view class="discard">
+      <text class="tile tile-discard">{{discard.label}}</text>
+      <text class="text-muted" wx:if="{{!discard.label}}">等待出牌</text>
+    </view>
+    <button class="button-primary" bindtap="handlePeng" disabled="{{!canPeng}}">碰牌</button>
+  </view>
+
+  <view class="card hand-card">
+    <text class="section-title">我的手牌</text>
+    <view class="hand">
+      <text wx:for="{{hand}}" wx:key="id" class="tile" bindtap="discardTile" data-id="{{item.id}}">
+        {{item.label}}
+      </text>
+    </view>
+  </view>
+
+  <view class="action-bar">
+    <button class="ghost" bindtap="drawFromWall">摸牌</button>
+    <button class="ghost" bindtap="goScore">结算</button>
+  </view>
+</view>
